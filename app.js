@@ -1,7 +1,8 @@
-var winMessage = `You Win! ${playerSelection} beats ${computerSelection}`
-var loseMessage = `You Lose! ${computerSelection} beats ${playerSelection}`
-var drawMessage = "It's a draw! Try again!"
-// const computerSelection = computerPlay()
+let result, playerScore, computerScore, gameOver;
+playerScore = 0
+computerScore = 0
+gameOver = false
+
 function computerPlay() {
     let options = ['Rock', 'Paper', 'Scissors'];
     // pick a random choice from options
@@ -9,8 +10,8 @@ function computerPlay() {
 }
 
 function playRound(computerSelection, playerSelection) {
-    
-
+    console.log(`PLAYER SELECTION: ${playerSelection}`)
+    console.log(`COMPUTER SELECTION: ${computerSelection}`)
     if (playerSelection === 'rock') {
         if (computerSelection === 'scissors') {
             return true
@@ -46,37 +47,47 @@ function playRound(computerSelection, playerSelection) {
     }
 }
 
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
 
-function game(numGames) {
-    let playerScore = 0;
-    let computerScore = 0;
-    for (let i = 1; i < numGames+1; i++) {
-        let playerSelection = window.prompt('Choose rock, paper, or scissors', "rock").toLowerCase();
-        let round = playRound(computerPlay(), playerSelection);
-        if (round) {
-            playerScore += 1;
-            console.log(winMessage)
-        }
-        else if (!round) {
-            computerScore += 1
-            console.log(loseMessage)
-        }
-        else {
-            console.log(drawMessage)
-        }
-        console.log(`Player: ${playerScore}
-                     Computer: ${computerScore}`)
+  // and for each one we add a 'click' listener
+  button.addEventListener('click', () => {
+    playerSelection = button.id;
+    
+    result = playRound(computerPlay(), playerSelection);
+    displayResults(result);
+  });
+});
+
+
+function displayResults(results) { 
+    let winMessage = `You Win!`
+    let loseMessage = `You Lose!`
+    let drawMessage = "It's a draw! Try again!"
+
+    if(results) {
+        console.log(winMessage);
+        playerScore++;
     }
-    if (playerScore > computerScore) {
-        console.log('Player Wins!')
-    }
-    else if (playerScore < computerScore) {
-        console.log('Computer Wins')
+    else if(!results && results !== null) {
+        console.log(loseMessage);
+        computerScore++;
     }
     else {
-        console.log("It's a draw! Play Again")
-    }
-}
+        console.log(drawMessage);
+    };
 
+    console.log(playerScore)
+};
 
-game(5)
+// while(!gameOver) {
+//     if(playerScore ==5 || computerScore == 5){
+//         if(playerScore > computerScore) {
+//             console.log('YOU WIN THE GAME');
+//         }
+//         else {
+//             console.log("YOU LOST THE GAME");
+//         }
+//         gameOver = true;
+//     };
+// };
