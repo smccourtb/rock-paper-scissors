@@ -45,6 +45,7 @@ function playRound(computerSelection, playerSelection) {
         }
     }
 }
+//TODO: validation
 
 
 function game(numGames) {
@@ -64,8 +65,7 @@ function game(numGames) {
         else {
             console.log(drawMessage)
         }
-        console.log(`Player: ${playerScore}
-                     Computer: ${computerScore}`)
+        console.log(`Player: ${playerScore}, Computer: ${computerScore}`)
     }
     if (playerScore > computerScore) {
         console.log('Player Wins!')
