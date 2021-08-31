@@ -9,8 +9,6 @@ function computerPlay() {
 };
 
 function playRound(computerSelection, playerSelection) {
-    console.log(`PLAYER SELECTION: ${playerSelection}`)
-    console.log(`COMPUTER SELECTION: ${computerSelection}`)
     if (playerSelection === 'rock') {
         if (computerSelection === 'scissors') {
             return true
@@ -56,37 +54,39 @@ buttons.forEach((button) => {
     result = playRound(computerPlay(), playerSelection);
     displayResults(result);
     checkForWin();
+
   });
 });
 
+const resultWindow = document.getElementById("results");
+const player = document.getElementById('player')
+const computer = document.getElementById('computer')
 
 function displayResults(results) { 
-    let winMessage = `You Win!`
-    let loseMessage = `You Lose!`
-    let drawMessage = "It's a draw! Try again!"
+    
 
     if(results) {
-        console.log(winMessage);
+         
         playerScore++;
+        
     }
     else if(!results && results !== null) {
-        console.log(loseMessage);
+       
         computerScore++;
     }
-    else {
-        console.log(drawMessage);
+    player.textContent = `Player Score : ${playerScore}`
+    computer.textContent = `Computer Score : ${computerScore}`
     };
 
-    console.log(playerScore)
-};
-
 function checkForWin() {
+    let winMessage = `You Win!`
+    let loseMessage = `You Lose!`
     if(playerScore ==5 || computerScore == 5){
         if(playerScore > computerScore) {
-            console.log('YOU WIN THE GAME');
+            resultWindow.textContent = winMessage;
         }
         else {
-            console.log("YOU LOST THE GAME");
+            resultWindow.textContent = loseMessage;
         }
     };
 };
