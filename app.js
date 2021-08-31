@@ -1,13 +1,12 @@
 let result, playerScore, computerScore, gameOver;
-playerScore = 0
-computerScore = 0
-gameOver = false
+playerScore = 0;
+computerScore = 0;
 
 function computerPlay() {
     let options = ['Rock', 'Paper', 'Scissors'];
     // pick a random choice from options
     return options[Math.floor(Math.random() * options.length)].toLowerCase()
-}
+};
 
 function playRound(computerSelection, playerSelection) {
     console.log(`PLAYER SELECTION: ${playerSelection}`)
@@ -21,31 +20,31 @@ function playRound(computerSelection, playerSelection) {
         }
         else {
             return null
-        }
-    }
+        };
+    };
     if (playerSelection === 'scissors') {
         if (computerSelection === 'paper') {
-            return true
+            return true;
         }
         else if (computerSelection === 'rock') {
-            return false
+            return false;
         }
         else {
-            return null
-        }
-    }
+            return null;
+        };
+    };
     if (playerSelection === 'paper') {
         if (computerSelection === 'rock') {
-            return true
+            return true;
         }
         else if (computerSelection === 'scissors') {
-            return false
+            return false;
         }
         else {
-            return null
-        }
-    }
-}
+            return null;
+        };
+    };
+};
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
@@ -56,6 +55,7 @@ buttons.forEach((button) => {
     
     result = playRound(computerPlay(), playerSelection);
     displayResults(result);
+    checkForWin();
   });
 });
 
@@ -80,14 +80,13 @@ function displayResults(results) {
     console.log(playerScore)
 };
 
-// while(!gameOver) {
-//     if(playerScore ==5 || computerScore == 5){
-//         if(playerScore > computerScore) {
-//             console.log('YOU WIN THE GAME');
-//         }
-//         else {
-//             console.log("YOU LOST THE GAME");
-//         }
-//         gameOver = true;
-//     };
-// };
+function checkForWin() {
+    if(playerScore ==5 || computerScore == 5){
+        if(playerScore > computerScore) {
+            console.log('YOU WIN THE GAME');
+        }
+        else {
+            console.log("YOU LOST THE GAME");
+        }
+    };
+};
