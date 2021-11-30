@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background-image: url("./images/light-bg.svg");
+  background-size: cover;
+  height: 100vh;
+}
+
+h1 {
+  display:block;
+  
+  width: 25em;
+  height: 100px;
+}
+
+header {
+  display:flex;
+  align-items: center;
+  width: 100%;
+  border: solid;
+  border-radius: 1em;
+}
+
+.rock {
+  transition: transform .3s ease-in-out;
+  border:solid 12px rgb(26, 120, 207);
+  box-shadow: 0px 5.5px 0px .5px rgb(20, 61, 163);
+  border-radius: 50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100px;
+  height: 100px;
+}
+
+.rock-bg {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: inset .15em .5em 5px rgb(202, 202, 202);
+
+}
+
+.hand-rock {
+  transform:scale(2);
+}
+
+.rock:hover {
+  transform:scale(1.2);
+  transition: transform .3s ease-in-out;
+
+}
