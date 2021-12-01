@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    display:flex;
+    align-items: center;
+    width: 50vw;
+    margin-top: 3em;
+    border: solid hsl(217, 16%, 45%);
+    border-radius: 1em;
+    justify-content: space-between;
+    padding: 1em 1.5em;
+  }
+
+.header__logo {
+    padding: 0;
+}
+
+.header__score-container {
+    height: 100%;
+    width: 15%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    background-color: white;
+    border-radius: .5em;
+}
+
+.header__score {
+    margin: 0;
+    color: hsl(229, 25%, 31%);
+    font-size: 3em;
+    font-weight: 700;
+}
+
+small {
+    color: hsl(229, 64%, 46%);
+}
