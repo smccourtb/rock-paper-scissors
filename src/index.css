@@ -16,14 +16,14 @@ body {
   display:flex;
   flex-direction:column;
   align-items:center;
-  background-image: url("./images/light-bg.svg");
+  background-image: url("./images/light-bg.svg"); 
   background-size: cover;
   height: 100vh;
 }
 
 h1 {
   display:block;
-  
+
   width: 25em;
   height: 100px;
 }
@@ -36,10 +36,9 @@ header {
   border-radius: 1em;
 }
 
-.rock {
-  transition: transform .3s ease-in-out;
-  border:solid 12px rgb(26, 120, 207);
-  box-shadow: 0px 5.5px 0px .5px rgb(20, 61, 163);
+.base-choice {
+  border:solid 12px grey;
+  box-shadow: 0px 5.5px 0px .5px black;
   border-radius: 50%;
   display:flex;
   align-items:center;
@@ -48,7 +47,43 @@ header {
   height: 100px;
 }
 
-.rock-bg {
+.rock {
+  border:solid 12px #467ee5;
+  box-shadow: 0px 5.5px 0px .5px #3b3b3b;
+  border-radius: 50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100px;
+  height: 100px;
+  align-self:flex-start;
+}
+
+.paper {
+  border:solid 12px #e5465b;
+  box-shadow: 0px 5.5px 0px .5px #3b3b3b;
+  border-radius: 50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100px;
+  height: 100px;
+  align-self:flex-end;
+}
+
+.scissors {
+  border:solid 12px #e2e546;
+  box-shadow: 0px 5.5px 0px .5px #3b3b3b;
+  border-radius: 50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100px;
+  height: 100px;
+  align-self: flex-start;
+}
+
+.choice-bg {
   display:flex;
   justify-content: center;
   align-items:center;
@@ -60,12 +95,46 @@ header {
 
 }
 
-.hand-rock {
-  transform:scale(2);
+.choice-icon {
+  transform:scale(3);
 }
 
-.rock:hover {
+.rock:hover, .paper:hover, .scissors:hover {
   transform:scale(1.2);
-  transition: transform .3s ease-in-out;
+}
 
+.choices {
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  width:25em;
+  height: 20em;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.post-choices {
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  width:40em;
+  height: 20em;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.player {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: center;
+}
+
+.player > div {
+  align-self:unset;
+}
+
+p {
+  font-size: 36px;
+  margin: 3em  3em 0;
 }
