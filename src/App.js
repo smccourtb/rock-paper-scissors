@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Header from "./components/Header";
 import Choice from "./components/Choice";
-import react from 'react';
 
 
 function App() {
@@ -24,13 +23,14 @@ function App() {
     console.log(gameState)
     setGameState(prevGameState =>({
       ...prevGameState,
-      mode: modes.basic,
       playerChoice: "",
       opponentChoice: "",
       winner: null
     }))
     setCount(3)
   }
+
+  
   function choose() {
     setGameState(prevGameState => ({...prevGameState, playerChoice: this.type}))
     opponentPick()
@@ -49,7 +49,6 @@ function App() {
   const winCondition = {"rock": ["scissors"], "paper":["rock"], "scissors":["paper"]}
 
   function determineWinner(){
-    console.log("called")
     const player = gameState.playerChoice;
     const opponent = gameState.opponentChoice;
     if (player === opponent) {
@@ -61,10 +60,8 @@ function App() {
       setGameState((prevGameState => ({...prevGameState, opponentScore: prevGameState.opponentScore+1, winner: "Opponent"})))
     }
   }
-  react.useEffect(() => {
-    console.log("IN HERESSSSSSSSSSSSSSSSSsss")
+  React.useEffect(() => {
     if(gameState.playerChoice && gameState.opponentChoice && !gameState.winner) {
-      console.log("BUT IN HERES BETTAHHHHH")
       determineWinner()
     }
   }, [gameState.opponentChoice])

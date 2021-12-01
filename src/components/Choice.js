@@ -29,9 +29,9 @@ function Choice(props) {
     })
     
     return(
-        <div className={`${props.type}` } onClick={props.owner ? handleClick: undefined}>
+        <div className={`${props.type} ${props.count > 0 && "countdown"}`} onClick={props.owner ? handleClick: undefined}>
             <div className="choice-bg">
-                <i className={`${icons[props.type]} choice-icon`}> {props.type==="base-choice" ? props.count || " " : " "}</i>
+                <i className={`${icons[props.type]} choice-icon `}>{props.type==="base-choice" ? props.count || " " : " "}</i>
             </div>
         </div>
     )

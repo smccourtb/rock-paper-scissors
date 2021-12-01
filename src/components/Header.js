@@ -1,7 +1,9 @@
+import basicLogo from "../images/logo.svg"
+
 function Header() {
     return(
         <header>
-            <h1>Rock | Paper | Scissors</h1>
+            <img src={basicLogo} alt="logo"/>
         </header>
     )
 }
