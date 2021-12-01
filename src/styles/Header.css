@@ -36,5 +36,6 @@ header {
 }
 
 small {
+    letter-spacing: .1em;;
     color: hsl(229, 64%, 46%);
 }

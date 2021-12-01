@@ -68,7 +68,7 @@ function App() {
   
   return (
     <div className="App">
-      <Header />
+      <Header score={gameState.playerScore}/>
       <main className={'choices'}>
         {gameState.playerChoice 
         ? 
