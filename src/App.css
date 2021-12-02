@@ -12,6 +12,5 @@ main {
   display: flex;
   justify-content: center;
   width: 67vw;
-  /* height: 50vh; */
   flex-grow:1;
 }

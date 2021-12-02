@@ -3,7 +3,7 @@ import "../styles/Footer.css";
 function Footer() {
     return(
         <footer>
-            <button>RULES</button>
+            <button className="rules" >RULES</button>
         </footer>
     )
 }

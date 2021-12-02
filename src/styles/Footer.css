@@ -1,5 +1,5 @@
-button {
-    margin: 2em;
+.rules {
+    margin:2em;
     background:transparent;
     border: solid .5px white;
     outline: none;
@@ -13,7 +13,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.rules:hover {
     background: white;
     color:hsl(237, 49%, 15%);
 }
