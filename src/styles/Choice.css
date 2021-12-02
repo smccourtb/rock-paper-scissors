@@ -1,10 +1,63 @@
 .choice {
+    background: url("../images/bg-triangle.svg") no-repeat;
+    background-position: center 5em;
+    background-size:25em;
     display:flex;
-    border:solid;
+}
+
+.choice-bg {
+    pointer-events: none;
+    width: 10.5em;
+    height: 10.5em;
+    border-radius: 50%;
+    box-shadow: inset 0em .5em .5em 3px rgb(202, 202, 202);
+    background: white;
+    background-size: 45%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.rock, .paper, .scissors {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width: 13em;
+    height: 13em;
+    border-radius:50%;
+    
+}
+
+.paper {
+    position: relative;
+    top:-1em;
+    left: 3em;
+    background: linear-gradient(hsl(230, 89%, 62%),hsl(230, 89%, 65%));
+    box-shadow: 0px 8px 0px .5px hsl(230, 54%, 38%);
+    
+}
+
+.scissors {
+    position: relative;
+    top:-1em;
+    right: -11em;
+    background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    box-shadow: 0px 8px 0px .5px hsl(40, 77%, 28%);
+}
+
+.rock {
+    position: relative;
+    align-self:flex-end;
+    right: 13em;
+    background: linear-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+    box-shadow: 0px 8px 0px .5px hsl(349, 55%, 31%);
 }
 
 .icon {
-    width: 300px;
-    height: 300px;
-    border:solid;
+    transform: scale(1.5);
+}
+
+.scissors:hover, .paper:hover, .rock:hover {
+    transform:scale(1.2);
+    transition:all .2s ease-out;
 }

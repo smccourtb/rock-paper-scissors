@@ -3,7 +3,6 @@
 }
 
 header {
-    font-family: 'Barlow Semi Condensed', sans-serif;
     display:flex;
     align-items: center;
     width: 50vw;
