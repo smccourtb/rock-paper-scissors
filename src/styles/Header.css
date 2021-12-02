@@ -2,8 +2,7 @@
     box-sizing: border-box;
 }
 
-header {
-    font-family: 'Barlow Semi Condensed', sans-serif;
+.main-header {
     display:flex;
     align-items: center;
     width: 50vw;

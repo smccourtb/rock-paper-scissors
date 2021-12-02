@@ -1,37 +1,30 @@
-import React from "react"
+import "../styles/Choice.css";
+import paperIcon from "../images/icon-paper.svg";
+import scissorsIcon from "../images/icon-scissors.svg";
+import rockIcon from "../images/icon-rock.svg";
+function Choice({setPlayerChoice}) {
 
-function Choice(props) {
-    // const [count, setCount] = React.useState(3)
-    const icons = { "rock": "far fa-hand-rock",
-                    "paper": "far fa-hand-paper",
-                    "scissors": "far fa-hand-scissors"
-                }
-
-    function handleClick() {
-       props.choose(props.type)
+    const choose = (e) => {
+        const target = e.target.attributes.name.value
+        setPlayerChoice(target)
     }
 
-    function startCountdown(seconds) {
-        let counter = seconds
-        const interval = setInterval(() => {
-        counter--;
-        props.setCount(counter)
-        if (counter < 1 ) {
-            clearInterval(interval);
-        }
-        }, 1000);
-      }
-
-    React.useEffect( () => {
-        if (props.type === "base-choice" && props.count > 0){
-            startCountdown(props.count)
-        }
-    })
-    
     return(
-        <div className={`${props.type} ${props.count > 0 && "countdown"}`} onClick={props.owner ? handleClick: undefined}>
-            <div className="choice-bg">
-                <i className={`${icons[props.type]} choice-icon `}>{props.type==="base-choice" ? props.count || " " : " "}</i>
+        <div className="choice">
+            <div className="paper" name="paper" onClick={choose}>
+                <div className="choice-bg">
+                    <img className="icon" src={paperIcon} alt="scissors"></img>
+                </div>
+            </div>
+            <div className="scissors" name="scissors" onClick={choose}>
+                <div className="choice-bg">
+                    <img className="icon" src={scissorsIcon} alt="scissors"></img>
+                </div>
+            </div>
+            <div className="rock" name="rock" onClick={choose}>
+                <div className="choice-bg">
+                    <img className="icon" src={rockIcon} alt="scissors"></img>
+                </div>
             </div>
         </div>
     )
