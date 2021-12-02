@@ -1,4 +1,4 @@
-.rules {
+.rules-btn {
     margin:2em;
     background:transparent;
     border: solid .5px white;
@@ -13,7 +13,8 @@
     cursor: pointer;
 }
 
-.rules:hover {
+.rules-btn:hover {
+    transition:all .2s ease-in;
     background: white;
     color:hsl(237, 49%, 15%);
 }

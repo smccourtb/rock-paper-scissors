@@ -6,9 +6,21 @@
   align-items:center;
   
 }
+.blur {
+    filter:blur(10px);
+}
 
-main {
-  margin: 8em 0em 0em;
+.ch {
+  margin: 6em 0em 0em;
+  display: flex;
+  justify-content: center;
+  width: 67vw;
+  flex-grow:1;
+}
+
+.res {
+  transform:scale(1.1);
+  margin: 9em 0em 0em;
   display: flex;
   justify-content: center;
   width: 67vw;

@@ -1,9 +1,10 @@
 import "../styles/Footer.css";
 
-function Footer() {
+function Footer({showRules, isOpen}) {
+    
     return(
-        <footer>
-            <button className="rules" >RULES</button>
+        <footer className={isOpen && "blur"}>
+            <button className="rules-btn" onClick={showRules}>RULES</button>
         </footer>
     )
 }

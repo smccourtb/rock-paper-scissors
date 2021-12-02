@@ -6,7 +6,7 @@ import {useState, useEffect} from 'react'
 
 function Result({playerChoice, setScore, setPlayerChoice}) {
     const modes = {'basic': ['rock', 'paper', 'scissors']}
-    const winMessage = {"rock": "Rock smashes scissors!", "paper": "Paper covers rock!", "scissors": "Scissors cut paper!"}
+    // const winMessage = {"rock": "Rock smashes scissors!", "paper": "Paper covers rock!", "scissors": "Scissors cut paper!"}
     const winCondition = {"rock": ["scissors"], "paper":["rock"], "scissors":["paper"]}
     
     const [opponentChoice, setOpponentChoice] = useState("");

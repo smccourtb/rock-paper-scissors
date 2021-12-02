@@ -25,6 +25,8 @@
     width: 13em;
     height: 13em;
     border-radius:50%;
+    transition:all .2s ease-out;
+
     
 }
 
