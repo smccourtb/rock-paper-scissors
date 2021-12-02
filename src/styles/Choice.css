@@ -3,6 +3,8 @@
     background-position: center 5em;
     background-size:25em;
     display:flex;
+    height: 450px;
+    transform:scale(.95);
 }
 
 .choice-bg {
@@ -63,3 +65,4 @@
     transform:scale(1.2);
     transition:all .2s ease-out;
 }
+

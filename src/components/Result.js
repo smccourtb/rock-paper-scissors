@@ -1,13 +1,25 @@
 import "../styles/Result.css"
+
+// icons
 import paperIcon from "../images/icon-paper.svg";
 import scissorsIcon from "../images/icon-scissors.svg";
 import rockIcon from "../images/icon-rock.svg";
+import lizardIcon from "../images/icon-lizard.svg";
+import spockIcon from "../images/icon-spock.svg";
+
 import {useState, useEffect} from 'react'
 
 function Result({playerChoice, setScore, setPlayerChoice}) {
-    const modes = {'basic': ['rock', 'paper', 'scissors']}
-    // const winMessage = {"rock": "Rock smashes scissors!", "paper": "Paper covers rock!", "scissors": "Scissors cut paper!"}
-    const winCondition = {"rock": ["scissors"], "paper":["rock"], "scissors":["paper"]}
+    const modes = {
+        'basic': ['rock', 'paper', 'scissors'], 
+        'advanced':['rock', 'paper', 'scissors', 'lizard', 'spock']
+    }
+
+    const winCondition = {
+        "rock": ["scissors"], 
+        "paper":["rock"], 
+        "scissors":["paper"]
+    }
     
     const [opponentChoice, setOpponentChoice] = useState("");
     const [count, setCount] = useState(3);
@@ -30,7 +42,6 @@ function Result({playerChoice, setScore, setPlayerChoice}) {
     }
 
     function determineWinner(){
-        console.log("PLAYER: ", playerChoice)
         if (playerChoice === opponentChoice) {
           setWin("draw")
         }
@@ -45,7 +56,6 @@ function Result({playerChoice, setScore, setPlayerChoice}) {
         let counter = seconds
         
         const interval = setInterval(() => {
-            console.log(counter)
             counter--;
             setCount(counter)
             if (counter < 1 ) {
@@ -79,9 +89,6 @@ function Result({playerChoice, setScore, setPlayerChoice}) {
 
     return(
     <div className="result-container">
-        
-
-
         <div className={win ? "player": "player-before"}>
             <p className="picked-player">YOU PICKED</p>
             <div className={win === "player" ? "win-player" : "win"}>
@@ -95,10 +102,13 @@ function Result({playerChoice, setScore, setPlayerChoice}) {
                 </div>
         </div>
 
-        {win && <div className={win ? "result-show": "result"}>
-            <p className="result-label">{win === "player" ? "YOU WIN" : win === "opponent" ? "YOU LOSE" : "DRAW"}</p>
-            <button className="reset" onClick={reset}>PLAY AGAIN</button>
-        </div>}
+        <div className={win ? "result-show": "result"}>
+            {win && <div>
+                <p className="result-label">{win === "player" ? "YOU WIN" : win === "opponent" ? "YOU LOSE" : "DRAW"}</p>
+                <button className="reset" onClick={reset}>PLAY AGAIN</button>
+        
+            </div>}
+        </div>
 
         <div className={win ? "opponent" : "opponent-before"}>
             <p className="picked-opponent">OPPONENT PICKED</p>
