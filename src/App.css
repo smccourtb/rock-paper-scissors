@@ -29,3 +29,107 @@
   flex-grow:1;
 }
 
+@media screen and (max-width: 1150px) {
+  .result-container{
+    transform:scale(.9) !important;
+  }
+  .result-show{
+    order:3;
+  }
+  .header-container {
+    width:80% !important;
+    transform:scale(1) !important;
+    
+  }
+
+  .player, .opponent {
+    /* transform:scale(.6) !important; */
+    width:50% !important;
+    justify-content:center !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .player, .opponent {
+    transform:scale(.8) !important;
+    width:50% !important;
+  }
+
+  .player-before, .opponent-before {
+    transform: scale(.7) !important;
+    margin: 0 !important;
+  }
+
+  .chosen-opponent {
+    justify-content: center !important;
+  }
+
+  .result {
+    order:3;
+  }
+}
+
+
+
+@media screen and (max-width: 575px) {
+  .res{
+    width: 85%;
+  }
+
+  .ch {
+    margin:0;
+  }
+  .result-show{
+    order:3;
+    padding:0 !important;
+    transform:scale(1.5) !important;
+  }
+  .result {
+    width:100% !important; 
+    order: 3;
+  }
+  .player, .opponent {
+    transform:scale(.7) !important;
+    justify-content:center !important;
+    align-items:center !important;
+    /* width:50% !important; */
+  }
+  .picked-player, .picked-opponent {
+    order:2;
+  }
+
+  /* .shadow {
+    margin-bottom: 4em !important;
+    margin-bottom: 1.5em;
+  } */
+
+  .choice {
+    transform: scale(.6) !important;
+  }
+
+  .win-player, .win-opponent {
+    margin-bottom: 8em !important;
+    z-index:-1 !important;
+
+  }
+  .player-before, .opponent-before {
+    transform:scale(.7) !important;
+    width:50%;
+
+  }
+
+  footer {
+    justify-content: center !important;
+    padding-bottom: 2em !important;
+  }
+
+  .rules-btn {
+    transform:scale(1.3) !important;
+  }
+
+  .header-container {
+    width:110% !important;
+    transform:scale(.55) !important;
+    
+  }
+}
