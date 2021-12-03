@@ -11,19 +11,23 @@ function Choice({setPlayerChoice}) {
 
     return(
         <div className="choice">
-            <div className="paper" name="paper" onClick={choose}>
-                <div className="choice-bg">
-                    <img className="icon" src={paperIcon} alt="scissors"></img>
+            <div class="choice__upper">
+                <div className="paper" name="paper" onClick={choose}>
+                    <div className="choice-bg">
+                        <img className="icon" src={paperIcon} alt="scissors"></img>
+                    </div>
+                </div>
+                <div className="scissors" name="scissors" onClick={choose}>
+                    <div className="choice-bg">
+                        <img className="icon" src={scissorsIcon} alt="scissors"></img>
+                    </div>
                 </div>
             </div>
-            <div className="scissors" name="scissors" onClick={choose}>
-                <div className="choice-bg">
-                    <img className="icon" src={scissorsIcon} alt="scissors"></img>
-                </div>
-            </div>
-            <div className="rock" name="rock" onClick={choose}>
-                <div className="choice-bg">
-                    <img className="icon" src={rockIcon} alt="scissors"></img>
+            <div class="choice__lower">
+                <div className="rock" name="rock" onClick={choose}>
+                    <div className="choice-bg">
+                        <img className="icon" src={rockIcon} alt="scissors"></img>
+                    </div>
                 </div>
             </div>
         </div>

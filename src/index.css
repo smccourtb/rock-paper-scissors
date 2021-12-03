@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+#root {
+  display:flex;
+  justify-content:center;
+}
+
 body {
   margin: 0;
   padding:0;
@@ -13,10 +18,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Barlow Semi Condensed', sans-serif;
-
   background: radial-gradient(hsl(214, 47%, 23%) ,hsl(237, 49%, 15%));
   background-size: cover;
-  height: 100vh;
 }
 
 code {

@@ -1,8 +1,9 @@
 .result-container {
     display:flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
+    /* flex-direction:column; */
     align-items: center;
-    justify-content:space-between;
+    justify-content:space-around;
     width:100%;
     flex-grow:1;
     align-self:flex-start;
@@ -59,7 +60,7 @@ p {
     font-weight: 800;
     font-size: 1em;
     letter-spacing: .05em;
-    order:2;
+    order:1;
 }
 
 /* .chosen-player {
@@ -98,8 +99,8 @@ span {
     justify-content:center;
     z-index:1;
     order:3;
-    margin:auto;
     font-size:.95em;
+    margin:0em 5em;
 }
 
 .result {
@@ -109,7 +110,7 @@ span {
 .result-label{
     margin:0;
     padding-bottom: .25em;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 800;
     color:white;
 }
