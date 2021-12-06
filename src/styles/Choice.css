@@ -1,4 +1,4 @@
-.choice {
+.choice-basic {
     background: url("../images/bg-triangle.svg") no-repeat;
     background-position: center 3.5em;
     background-size: 15em 14em;
@@ -7,6 +7,38 @@
     align-items:center;
     justify-content:space-around;
     gap:1.5em;
+}
+
+.choice-advanced {
+    background: url("../images/bg-pentagon.svg") no-repeat;
+    background-position: center 5.5em;
+    background-size: 14em 14em;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.advanced__upper {
+
+    display:flex;
+    justify-content: center;
+    transform:scale(.7);
+}
+
+.advanced__middle {
+    flex-grow: 1;
+    margin-top: -1em;
+    width: 120%;
+    display:flex;
+    justify-content: space-between;
+    transform:scale(.7);
+}
+
+.advanced__lower {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    transform:scale(.7);
 }
 
 .choice__upper {
@@ -26,7 +58,11 @@
     align-items:center;
 }
 
-.rock, .paper, .scissors {
+.icon {
+    width: 40%;
+}
+
+.rock, .paper, .scissors, .spock, .lizard {
     display:flex;
     justify-content: center;
     align-items:center;
@@ -51,7 +87,17 @@
     box-shadow: 0px 8px 0px .5px hsl(349, 55%, 31%);
 }
 
-.scissors:hover, .paper:hover, .rock:hover {
+.spock {
+    background: linear-gradient(hsl(189, 59%, 53%) , hsl(189, 58%, 57%));
+    box-shadow: 0px 8px 0px .5px hsl(189, 53%, 30%);
+}
+
+.lizard {
+    background: linear-gradient(hsl(261, 73%, 60%) , hsl(261, 72%, 63%));
+    box-shadow: 0px 8px 0px .5px hsl(261, 49%, 40%);
+}
+
+.scissors:hover, .paper:hover, .rock:hover, .spock:hover, .lizard:hover {
     transform:scale(1.2);
     transition:all .2s ease-out;
 }

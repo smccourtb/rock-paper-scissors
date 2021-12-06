@@ -1,0 +1,31 @@
+.mode {
+    background:white;
+    outline: none;
+    border:none;
+    padding: 1em 1.5em;
+    border-radius: .67em;
+    color:hsl(237, 49%, 15%);
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: 500;
+    letter-spacing: .125em;
+    cursor: pointer;
+    width:100%;
+    transition: all .2s ease-in;
+
+}
+
+.mode-container {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    gap: 3em;
+}
+
+.mode:hover {
+    color:hsl(349, 71%, 52%);
+    transition: all .2s ease-in;
+    transform:scale(1.1)
+}

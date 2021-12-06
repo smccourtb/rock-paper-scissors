@@ -16,9 +16,11 @@ function Result({playerChoice, setScore, setPlayerChoice}) {
     }
 
     const winCondition = {
-        "rock": ["scissors"], 
-        "paper":["rock"], 
-        "scissors":["paper"]
+        "rock": ["scissors", "lizard"], 
+        "paper":["rock", "spock"], 
+        "scissors":["paper", "lizard"],
+        "lizard": ["spock", "paper"],
+        "spock": ["scissors", "rock" ]
     }
     
     const [opponentChoice, setOpponentChoice] = useState("");
@@ -37,6 +39,8 @@ function Result({playerChoice, setScore, setPlayerChoice}) {
             case "rock": return rockIcon;
             case "paper": return paperIcon;
             case "scissors": return scissorsIcon
+            case "lizard": return lizardIcon
+            case "spock": return spockIcon
             default: return;
         }
     }

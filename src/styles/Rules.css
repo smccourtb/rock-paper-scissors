@@ -4,7 +4,7 @@
     top: 0;
     background:white;
     z-index:1;
-    display:flex;
+    /* display:flex; */
     justify-content:space-around;
     align-items: center;
     flex-direction:column;
@@ -30,3 +30,30 @@
     transition:all .2s ease-in;
     transform:scale(1.4);
 }
+
+@media screen and (min-width: 576px) {
+    .rules {
+        height: 50%;
+        width:33%;
+        left: 33%;
+        top: 25%;
+        border-radius: .5em;
+    }
+
+    .rules > img {
+        order:2;
+        max-height: 75%;
+    }
+
+    .rules__close-button {
+        position: absolute;
+        top : 3em;
+
+        align-self:flex-end;
+    }
+
+    .rules >h2 {
+        margin-right:auto;
+    }
+    
+  }
