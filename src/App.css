@@ -42,4 +42,7 @@
   .choice {font-size:larger;}
   header {font-size:24px !important;}
   .header-container {width: 75% !important;}
+  .choice-advanced{width: 40% !important; align-self: center !important; transform:scale(1) !important;}
+  /* .advanced__upper, .advanced__middle, .advanced__lower { transform:scale(1) !important;} */
+  .ch {display:flex; justify-content:center;}
 }

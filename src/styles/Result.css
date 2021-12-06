@@ -133,10 +133,8 @@ span {
 .reset:hover {
     color:hsl(349, 71%, 52%);
     transition: color .2s ease-in;
-
-
-
 }
+
 @keyframes pulse{
     0%    { scale: 1; }
     20%   { scale: 1.2; }

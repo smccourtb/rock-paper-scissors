@@ -25,7 +25,7 @@ function App() {
       <ModeSelect setMode={setMode} />
       :
       <>
-        {isOpen ? <Rules showRules={showRules}/> : undefined}
+        {isOpen && <Rules showRules={showRules} mode={mode}/>}
 
         <Header score={score} isOpen={isOpen} mode={mode}/>
         <main className={`${playerChoice ? "res" : "ch"} ${isOpen ? "blur" : undefined}`}>
